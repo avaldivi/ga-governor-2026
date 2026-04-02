@@ -43,6 +43,30 @@ export default function App() {
         Skip to main content
       </a>
 
+      {/* Voter Registration Deadline Banner */}
+      <div
+        role="alert"
+        style={{
+          background: "linear-gradient(90deg, #c9a84c22, #c9a84c11)",
+          borderBottom: "1px solid #c9a84c44",
+          padding: "10px 24px",
+          textAlign: "center",
+          fontSize: 13,
+          color: "#e8d9a0",
+          fontWeight: 500,
+        }}
+      >
+        🗳️ <strong style={{ color: "#c9a84c" }}>Voter Registration Deadline: April 20, 2026</strong> — Register to vote in the May 19 primary at{" "}
+        <a
+          href="https://mvp.sos.ga.gov/s/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "#c9a84c", fontWeight: 700, textDecoration: "underline" }}
+        >
+          My Voter Page
+        </a>
+      </div>
+
       {/* Hero */}
       <header style={{
         textAlign: "center", padding: "60px 24px 48px", borderBottom: "1px solid #1e1e1e",
@@ -92,7 +116,7 @@ export default function App() {
 
       {/* Content */}
       <main id="main-content" style={{ maxWidth: 1200, margin: "0 auto", padding: "32px 24px 60px" }}>
-        <PartySection title="Democrats" count="6" party="dem" candidates={CANDIDATES.dem} visible={filter === "all" || filter === "dem"} />
+        <PartySection title="Democrats" count="7" party="dem" candidates={CANDIDATES.dem} visible={filter === "all" || filter === "dem"} />
 
         {filter === "all" && (
           <div role="separator" aria-hidden="true" style={{ display: "flex", alignItems: "center", gap: 24, margin: "20px 0 48px" }}>
@@ -102,7 +126,7 @@ export default function App() {
           </div>
         )}
 
-        <PartySection title="Republicans" count="8" party="rep" candidates={CANDIDATES.rep} visible={filter === "all" || filter === "rep"} />
+        <PartySection title="Republicans" count="9" party="rep" candidates={CANDIDATES.rep} visible={filter === "all" || filter === "rep"} />
 
         {/* Disclaimer */}
         <div style={{
@@ -111,10 +135,11 @@ export default function App() {
           fontSize: 11, color: "#777", lineHeight: 1.8, textAlign: "center",
         }}>
           <strong style={{ color: "#999" }}>📋 About This Page</strong><br />
-          Nonpartisan voter information resource. Static funding figures reflect public disclosures as of March 2026.
+          Nonpartisan voter information resource. Polling data from Emerson College/Nexstar (March 2026) and other noted sources. Static funding figures reflect public disclosures as of early 2026.
           The ⚡ Check Latest button queries Claude AI for more recent data — results are cached daily and shared across all visitors.
           For authoritative filings visit the <a href="https://ethics.ga.gov" target="_blank" rel="noopener noreferrer" style={{ color: "#c9a84c" }}>Georgia Ethics Commission</a> or <a href="https://www.transparencyusa.org/ga" target="_blank" rel="noopener noreferrer" style={{ color: "#c9a84c" }}>Transparency USA</a>.<br /><br />
-          <em>Primary: May 19, 2026 · Runoff (if needed): June 16, 2026 · General Election: November 3, 2026</em>
+          <strong style={{ color: "#999" }}>🗳️ Key Dates</strong><br />
+          <em>Voter Registration Deadline: April 20, 2026 · Primary: May 19, 2026 · Runoff (if needed): June 16, 2026 · General Election: November 3, 2026</em>
         </div>
       </main>
     </div>

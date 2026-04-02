@@ -1,6 +1,6 @@
 # Georgia Governor 2026 — Voter Guide
 
-A nonpartisan voter information site for the 2026 Georgia gubernatorial race. Profiles all 15 declared candidates (6 Democrats, 8 Republicans) with polling data, platform summaries, and AI-powered live campaign finance lookups.
+A nonpartisan voter information site for the 2026 Georgia gubernatorial race. Profiles all qualified candidates (7 Democrats, 9 Republicans) with polling data, platform summaries, and AI-powered live campaign finance lookups.
 
 **Live site:** https://ga-governor-2026.vercel.app
 
@@ -116,7 +116,7 @@ Set `MOCK_FUNDING=true` in `.env` to skip Redis and return placeholder text. Use
 │   └── funding.ts          # Vercel serverless function (GET + POST cache endpoints)
 │
 ├── src/
-│   ├── App.tsx             # Root layout: hero, nav, party sections
+│   ├── App.tsx             # Root layout: hero, nav, party sections, registration banner
 │   ├── components/
 │   │   ├── candidate-card.tsx   # Expandable candidate card with funding lookup
 │   │   ├── party-section.tsx    # Section wrapper for a party's candidate grid
@@ -126,7 +126,7 @@ Set `MOCK_FUNDING=true` in `.env` to skip Redis and return placeholder text. Use
 │   │   ├── llm.ts          # Calls Anthropic API from the browser
 │   │   └── session.ts      # Persists API key + model choice in sessionStorage
 │   ├── constants/
-│   │   ├── candidates.ts   # All 15 candidate profiles (polling, funding, platform)
+│   │   ├── candidates.ts   # All candidate profiles (polling, funding, platform)
 │   │   ├── models.ts       # Claude model options shown in the modal
 │   │   └── badge-styles.ts # Color themes for badge chips
 │   └── types/              # TypeScript interfaces
